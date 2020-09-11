@@ -1,0 +1,520 @@
+body{
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-track{
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb{
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(219,219,219, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active{
+    background: rgb(219,219,219, 0.7);
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background: #3d3d3d;
+}
+
+.bg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(Image/BG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: contrast(0.7) saturate(0.5);
+}
+
+.filter{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(45, 52, 54, 0.3);
+}
+
+.container .content{
+    position: absolute;
+    height: 80%;
+    width: 75%;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.35);
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.photo{
+    position: absolute;
+    max-width: 20%;
+    align-self: center;
+    right: 20%;
+}
+
+.photo img{
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    pointer-events: none;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+.name{
+    position: absolute;
+    max-width: 60%;
+    align-self: center;
+    top: 35%;
+    left: 19%;
+}
+
+.name .text{
+    margin-right: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 5em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.name .cube{
+    position: absolute;
+    width: 50%;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.5);
+    right: 0;
+    bottom: 0;
+}
+
+.name .button{
+    position: absolute;
+    height: 50px;
+    width: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120%;
+    border: 1.5px solid #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 110%;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.name .button:hover{
+    cursor: pointer;
+}
+
+.name .button:active{
+    transition: 0.2s ease;
+    transform: translate(-50%, 1px);
+}
+
+.title{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 250%;
+    font-weight: bold;
+    color: #fff;
+}
+
+.container .panel{
+    position: absolute;
+    height: 80%;
+    width: 75%;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.35);
+    align-self: center;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(45, 52, 54, 0.3);
+    display: flex;
+}
+
+.panel01{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelShow01{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide01{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panel02{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panelShow02{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide02{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panel03{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panelShow03{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide03{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panel04{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.panelShow04{
+    transition: 0.5s linear;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelHide04{
+    transition: 0.5s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.numNav{
+    position: absolute;
+    height: 20px;
+    width: auto;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    float: left;
+    cursor: default;
+}
+
+.numNav a{
+    outline: none;
+    text-decoration: none;
+}
+
+.number{
+    display: inline-block;
+    margin: 0 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.number:hover{
+    transition: 0.2s linear;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+video{
+    position: absolute;
+    max-width: 640px;
+    align-self: center;
+    left: 50%;
+    transform: translate(-50%, 4%);
+    background: #3d3d3d;
+    border: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.album{
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -46%);
+    text-align: center;
+}
+
+.album a{
+    outline: none;
+    text-decoration: none;
+}
+
+.gallery{
+    height: 30%;
+    width: 20%;
+    margin: 5px;
+    display: inline-block;
+}
+
+#g1{
+    background-color: #fff;
+    background-image: url(Image/Gallery/01.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g2{
+    background-color: #fff;
+    background-image: url(Image/Gallery/02.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g3{
+    background-color: #fff;
+    background-image: url(Image/Gallery/03.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g4{
+    background-color: #fff;
+    background-image: url(Image/Gallery/04.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g5{
+    background-color: #fff;
+    background-image: url(Image/Gallery/05.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g6{
+    background-color: #fff;
+    background-image: url(Image/Gallery/06.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#g7{
+    background-color: #fff;
+    background-image: url(Image/Gallery/07.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g8{
+    background-color: #fff;
+    background-image: url(Image/Gallery/08.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#g9{
+    background-color: #fff;
+    background-image: url(Image/Gallery/09.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+#g10{
+    background-color: #fff;
+    background-image: url(Image/Gallery/10.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g11{
+    background-color: #fff;
+    background-image: url(Image/Gallery/11.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#g12{
+    background-color: #fff;
+    background-image: url(Image/Gallery/12.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game{
+    position: relative;
+    height: 30%;
+    width: 40%;
+    border-radius: 3px;
+    margin: 15px;
+    display: inline-block;
+    background: #3d3d3d;
+}
+
+#game01{
+    background-image: url(Image/Game01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game .gameName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    text-shadow: 0 0 0.2em #0007;
+    color: rgba(255, 255, 255, 1.0);
+    filter: brightness(2);
+}
+
+.video{
+    position: relative;
+    height: 30%;
+    width: 40%;
+    border-radius: 3px;
+    margin: 15px;
+    display: inline-block;
+    background: #3d3d3d;
+    filter: saturate(0.7) contrast(0.6);
+}
+
+#video01{
+    background-image: url(Image/Video01.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#video02{
+    background-image: url(Image/Video02.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#video03{
+    background-image: url(Image/Video03.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#video04{
+    background-image: url(Image/Video04.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.video .videoName{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 180%;
+    font-weight: bold;
+    text-shadow: 0 0 0.2em #0007;
+    color: rgba(255, 255, 255, 1.0);
+    filter: brightness(2);
+}
+
+.team{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+#t1{
+    background: url(Image/Team01.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#t2{
+    background: url(Image/Team02.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 120%;
+    font-weight: bold;
+    color: #0007;
+}
+
+.homeBtn{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(Image/menu.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+}

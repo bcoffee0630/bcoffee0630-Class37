@@ -1,0 +1,389 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #3d3d3d;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: "GenjyuuBold";
+    src: url(Font/GenJyuuGothic-Bold.ttf);
+}
+
+@font-face{
+    font-family: "GenjyuuMedium";
+    src: url(Font/GenJyuuGothic-Medium.ttf);
+}
+
+@font-face{
+    font-family: "GenjyuuLight";
+    src: url(Font/GenJyuuGothic-Light.ttf);
+}
+
+@font-face{
+    font-family: "GenjyuuExtraLight";
+    src: url(Font/GenJyuuGothic-ExtraLight.ttf);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(219,219,219, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(219,219,219, 0.7);
+}
+
+.project{
+    height: 100vh;
+    width: 100%;
+    background: url(Image/001.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#p0{
+    filter: sepia(0.1) brightness(0.9);
+}
+
+#p1{
+    background: url(Image/002.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#p2{
+    background: url(Image/003.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#p3{
+    background: url(Image/004.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#p4{
+    background: url(Image/005.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.middle{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.title{
+    width: 100%;
+    font-family: "GenjyuuLight";
+    font-size: 320%;
+    color: #fff;
+    transform: translateY(-50%);
+}
+
+.line{
+    border: .5px solid white;
+    background: #fff;
+    width: 320px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#secondTitle{
+    font-size: 50%;
+}
+
+.content{
+    width: 100%;
+}
+
+.start{
+    position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+    animation: flash 1.2s linear infinite;
+}
+
+@keyframes flash{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.start:hover{
+    cursor: pointer;
+}
+
+#outline{
+    height: 50px;
+    width: 50px;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+#point{
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+}
+
+.home{
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 5%;
+    right: 3%;
+    background-image: url(Image/Home.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.home:hover{
+    cursor: pointer;
+}
+
+.class37{
+    position: fixed;
+    height: 30px;
+    text-align: left;
+    top: 5%;
+    left: 3%;
+    font-family: "Microsoft YaHei UI";
+    font-size: 170%;
+    font-weight: bold;
+    color: #fff;
+	text-decoration: none;
+}
+
+.class37:hover{
+    cursor: pointer;
+}
+
+.panel{
+    position: relative;
+    height: 85%;
+    width: 60%;
+    border: none;
+    background: none;
+    /*box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);*/
+}
+
+.itemCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.next{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    background: none;
+    outline: none;
+    text-decoration: none;
+    margin: 0 15px 15px 0;
+    transform: rotateZ(45deg) scale(0.8);
+    opacity: 0.5;
+    pointer-events: none;
+    animation: slide 1s linear infinite;
+}
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        bottom: 16px;
+    }
+    25%{
+        opacity: 0.5;
+        bottom: 12px;
+    }
+    50%{
+        opacity: 1;
+        bottom: 8px;
+    }
+    75%{
+        opacity: 0.5;
+        bottom: 4px;
+    }
+    100%{
+        opacity: 0;
+        bottom: 0px;
+    }
+}
+
+.nextBtn{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background: none;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+    bottom: 8px;
+    cursor: pointer;
+}
+
+.containLeft{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: none;
+    top: 0;
+    left: 0;
+}
+
+.containRight{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: none;
+    top: 0;
+    right: 0;
+}
+
+.iconHolder{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .iconTitle{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "GenjyuuExtraLight";
+    font-size: 200%;
+    color: #fff;
+}
+
+.content .hr{
+    position: absolute;
+    border: .5px solid white;
+    background: #fff;
+    width: 200px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content .secondIconTitle{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "GenjyuuExtraLight";
+    font-size: 120%;
+    color: #fff;
+}
+
+.content .learnMore{
+    position: absolute;
+    height: 50px;
+    width: 130px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: none;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "GenjyuuExtraLight";
+    font-size: 100%;
+    color: #fff;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.content .learnMore:hover{
+    cursor: pointer;
+}
+
+.icon{
+    height: 280px;
+    width: 280px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+#icon1{
+    background: url(Image/Icon01.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#icon2{
+    background: url(Image/Icon02.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#icon3{
+    background: url(Image/Icon03.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#icon4{
+    background: url(Image/Icon04.png);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,244 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #2f3640;
+    background-image: url(Image/001.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    font-family: consolas;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(219,219,219, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(219,219,219, 0.7);
+}
+
+.title{
+    position: absolute;
+    top: 30%;
+    font-size: 200%;
+    color: #fff;
+    text-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+#secondTitle{
+    font-family: Microsoft JHengHei UI;
+    font-size: 80%;
+}
+
+.pressable{
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 79%;
+    transform: translateX(-36px);
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+}
+
+.btn{
+    position: absolute;
+    color: #fff;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 30px;
+    height: 30px;
+    transform: rotateZ(-45deg);
+    top: 80%;
+    pointer-events: none;
+    animation: arrow 1.5s linear infinite;
+}
+
+@keyframes arrow{
+    0%{
+        transform: rotateZ(-45deg) translateY(0);
+        opacity: 0;
+    }
+    50%{
+        transform: rotateZ(-45deg) translateX(-10px) translateY(10px);
+        opacity: 1;
+    }
+    100%{
+        transform: rotateZ(-45deg) translateX(-20px) translateY(20px);
+        opacity: 0;
+    }
+}
+
+#nonBtn{
+    top: 78%;
+    transform: rotateZ(-45deg);
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    pointer-events: none;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.border{
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#p1{
+    margin: 100vh  0 0 0;
+}
+
+#p2{
+    margin: 200vh 0 0 0;
+}
+
+#p3{
+    margin: 300vh 0 0 0;
+    border-bottom: 2px solid rgba(255,255,255,1);
+}
+
+.pad{
+    width: 90%;
+    height: 90%;
+    background: rgba(255,255,255,0.3);
+    position: relative;
+    left: 5%;
+    top: 5%;
+    bottom: 5%;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: "1fr 1fr 1fr 1fr 1fr" 30vh
+                   "1fr 1fr 1fr 1fr 1fr" 30vh
+                   "1fr 1fr 1fr 1fr 1fr" 30vh;
+}
+
+.content .box{
+    position: relative;
+    background: #ccc;
+}
+
+.content .box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#p1 .content .box.a{
+    grid-row: span 2;
+}
+
+#p1 .content .box.b,
+#p1 .content .box.f,
+#p1 .content .box.h,
+#p1 .content .box.j{
+    grid-column: span 2;
+}
+
+#p2 .content .box.c,
+#p2 .content .box.e{
+    grid-row: span 2;
+}
+
+#p2 .content .box.f,
+#p2 .content .box.i,
+#p2 .content .box.j{
+    grid-column: span 2;
+}
+
+#p3 .content .box.d,
+#p3 .content .box.g{
+    grid-row: span 2;
+}
+
+#p3 .content .box.b,
+#p3 .content .box.i,
+#p3 .content .box.j{
+    grid-column: span 2;
+}
+
+.footer{
+    width: 100%;
+    height: 20%;
+    background-color: rgba(0,0,0,0.6);
+    top: 100%;
+    left: 0;
+    position: absolute;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.homeBtn{
+    width: 125px;
+    height: 50px;
+    background: none;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    margin-top: 50px;
+    text-align: center;
+    cursor: default;
+    transition: 0.2 linear all;
+}
+
+.btnText{
+    color: #fff;
+    font-size: 180%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transform: translateY(-2px);
+    background: none;
+    box-shadow: none;
+}
+
+.homeBtn:active{
+    transform: translateY(1px);
+}
+
+@media (max-width: 991px){
+    .content{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template: "1fr 1fr 1fr" 100px
+                       "1fr 1fr 1fr" 100px
+                       "1fr 1fr 1fr" 100px
+                       "1fr 1fr 1fr" 100px;
+    }
+}

@@ -1,0 +1,279 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #3d3d3d;
+}
+
+hr{
+    margin: 0 20%;
+    border-top: .3px solid #fff;
+    border-bottom: .3px solid #fff;
+    background: #fff;
+    opacity: 0.8;
+}
+
+@font-face{
+    font-family: "GenjyuuBold";
+    src: url(../Font/GenJyuuGothic-Bold.ttf);
+}
+
+@font-face{
+    font-family: "GenjyuuMedium";
+    src: url(../Font/GenJyuuGothic-Medium.ttf);
+}
+
+@font-face{
+    font-family: "GenjyuuLight";
+    src: url(../Font/GenJyuuGothic-Light.ttf);
+}
+
+@font-face{
+    font-family: "GenjyuuExtraLight";
+    src: url(../Font/GenJyuuGothic-ExtraLight.ttf);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: rgb(219,219,219, 0.5);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgb(219,219,219, 0.7);
+}
+
+.bg{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-image: url(Image/002.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px) saturate(0.8) brightness(0.9) contrast(1.1);
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.logo{
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-image: url(Image/Icon02.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center .logo{
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    font-family: "GenjyuuMedium";
+    font-size: 300%;
+    text-align: center;
+}
+
+.center .title{
+    bottom: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.secondTitle{
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    font-family: "GenjyuuLight";
+    font-size: 200%;
+    text-align: center;
+}
+
+.center .secondTitle{
+    bottom: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+iframe{
+    position: absolute;
+    height: 600px;
+    width: 960px;
+    background: #3d3d3d;
+    border: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.center iframe{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+video{
+    position: absolute;
+    height: 540px;
+    width: 960px;
+    background: #3d3d3d;
+    border: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+.center video{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.creator{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    color: #fff;
+    font-family: "GenjyuuMedium";
+    font-size: 200%;
+    text-align: center;
+}
+
+.center .creator{
+    top: 10%;
+}
+
+.iconHolder{
+    height: 20%;
+    width: 80%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.center .iconHolder{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.namePlace{
+    height: 10%;
+    width: 80%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    font-family: "GenjyuuLight";
+    font-size: 200%;
+    text-align: center;
+}
+
+.center .namePlace{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.name{
+    min-width: 160px;
+    margin: 0 10px;
+}
+
+.teamLogo{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.teamLogo img{
+    max-width: 50%;
+    filter: blur(1px);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.headIcon{
+    min-height: 160px;
+    min-width: 160px;
+    border-radius: 50%;
+    margin: 0px 10px;
+}
+
+#head01{
+    background: url(Image/Photo/04B.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 25%;
+    background-repeat: repeat-x;
+}
+
+#head02{
+    background: url(Image/Photo/07B.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+}
+
+#head03{
+    background: url(Image/Photo/16B.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 25%;
+    background-repeat: no-repeat;
+}
+
+#head04{
+    background: url(Image/Photo/17A.jpg);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 25%;
+    background-repeat: no-repeat;
+}
+
+.menu{
+    width: 100%;
+    filter: invert(100%);
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.menu .img{
+    height: 20px;
+    width: 50px;
+    background: url(Image/menu.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.center .menu{
+    display: flex;
+    justify-content: center;
+}

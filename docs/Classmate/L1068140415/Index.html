@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>L1068140415</title>
+        <link rel="stylesheet" href="Style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </head>
+    <body>
+        <div class="container" id="p0">
+            <div class="bg">
+                <div class="filter"></div>
+            </div>
+
+            <div class="content"></div>
+
+            <div class="photo">
+                <img src="Image/001.jpg" alt="">
+            </div>
+
+            <div class="name">
+                <div class="cube"></div>
+                <div class="text">YII MIMG LOK</div>
+                <a href="#p1">
+                    <div class="button">PORTFOLIO</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="container" id="p1">
+            <div class="bg">
+                <div class="filter"></div>
+            </div>
+
+            <div class="panel panel01">
+                <div class="title">WORKS</div>
+
+                <div class="album">
+                    <a href="Image/Gallery/01.png" target="_blank">
+                        <div class="gallery" id="g1"></div>
+                    </a>
+                    <a href="Image/Gallery/02.png" target="_blank">
+                        <div class="gallery" id="g2"></div>
+                    </a>
+                    <a href="Image/Gallery/03.png" target="_blank">
+                        <div class="gallery" id="g3"></div>
+                    </a>
+                    <a href="Image/Gallery/04.png" target="_blank">
+                        <div class="gallery" id="g4"></div>
+                    </a>
+                    <a href="Image/Gallery/05.jpg" target="_blank">
+                        <div class="gallery" id="g5"></div>
+                    </a>
+                    <a href="Image/Gallery/06.png" target="_blank">
+                        <div class="gallery" id="g6"></div>
+                    </a>
+                    <a href="Image/Gallery/07.png" target="_blank">
+                        <div class="gallery" id="g7"></div>
+                    </a>
+                    <a href="Image/Gallery/08.png" target="_blank">
+                        <div class="gallery" id="g8"></div>
+                    </a>
+                    <a href="Image/Gallery/09.png" target="_blank">
+                        <div class="gallery" id="g9"></div>
+                    </a>
+                    <a href="Image/Gallery/10.jpg" target="_blank">
+                        <div class="gallery" id="g10"></div>
+                    </a>
+                    <a href="Image/Gallery/11.jpg" target="_blank">
+                        <div class="gallery" id="g11"></div>
+                    </a>
+                    <a href="Image/Gallery/12.jpg" target="_blank">
+                        <div class="gallery" id="g12"></div>
+                    </a>
+                </div>
+
+                <div class="numNav">
+                    <div class="number n1">1</div>
+                    <div class="number n2">2</div>
+                    <a href="#p0">
+                        <div class="number">·</div>
+                    </a>
+                    <div class="number n3">3</div>
+                    <div class="number n4">4</div>
+                </div>
+            </div>
+
+            <div class="panel panel02">
+                <div class="title">GAMES DEVELOPED</div>
+
+                <div class="album">
+                    <a href="https://drive.google.com/file/d/1LPG6PtF3UcD7sKHawj9uHL66bvGmcOmz/view?usp=sharing" target="_blank">
+                        <div class="game" id="game01">
+                            <div class="gameName">賭徒契機</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="numNav">
+                    <div class="number n1">1</div>
+                    <div class="number n2">2</div>
+                    <a href="#p0">
+                        <div class="number">·</div>
+                    </a>
+                    <div class="number n3">3</div>
+                    <div class="number n4">4</div>
+                </div>
+            </div>
+
+            <div class="panel panel03">
+                <div class="title">VIDEO PRODUCTION</div>
+
+                <div class="album">
+                    <a href="Video/001/Index.html" target="_blank">
+                        <div class="video" id="video01">
+                            <div class="videoName"></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="numNav">
+                    <div class="number n1">1</div>
+                    <div class="number n2">2</div>
+                    <a href="#p0">
+                        <div class="number">·</div>
+                    </a>
+                    <div class="number n3">3</div>
+                    <div class="number n4">4</div>
+                </div>
+            </div>
+
+            <div class="panel panel04">
+                <div class="title">TEAM PROJECT</div>
+
+                <div class="album">
+                    <a href="Video/002/Index.html" target="_blank">
+                        <div class="team" id="t1">
+                            <div class="about">
+                                傳承獵人<br>
+                                <br>
+                                余民樂<br>
+                                郭永峰<br>
+                                李賢澤<br>
+                                馮康廉
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="numNav">
+                    <div class="number n1">1</div>
+                    <div class="number n2">2</div>
+                    <a href="#p0">
+                        <div class="number">·</div>
+                    </a>
+                    <div class="number n3">3</div>
+                    <div class="number n4">4</div>
+                </div>
+            </div>
+
+            <a href="../../Index.html">
+                <div class="homeBtn"></div>
+            </a>
+        </div>
+
+        <script type="text/javascript">
+            $('.n1').on("click", function(){
+                $('.panel02').toggleClass('panelShow02', false);
+                $('.panel02').toggleClass('panelHide02', true);
+                
+                $('.panel02').toggleClass('panelShow03', false);
+                $('.panel03').toggleClass('panelHide03', true);
+                
+                $('.panel02').toggleClass('panelShow04', false);
+                $('.panel04').toggleClass('panelHide04', true);
+
+                $('.panel01').toggleClass('panelHide01', false);
+                $('.panel01').toggleClass('panelShow01', true);
+            })
+
+            $('.n2').on("click", function(){
+                $('.panel02').toggleClass('panelHide02', false);
+                $('.panel02').toggleClass('panelShow02', true);
+
+                $('.panel01').toggleClass('panelHide01', true);
+                $('.panel01').toggleClass('panelShow01', false);
+
+                $('.panel03').toggleClass('panelShow03', false);
+                $('.panel03').toggleClass('panelHide03', true);
+                
+                $('.panel04').toggleClass('panelShow04', false);
+                $('.panel04').toggleClass('panelHide04', true);
+            })
+
+            $('.n3').on("click", function(){
+                $('.panel03').toggleClass('panelHide03', false);
+                $('.panel03').toggleClass('panelShow03', true);
+
+                $('.panel01').toggleClass('panelHide01', true);
+                $('.panel01').toggleClass('panelShow01', false);
+
+                $('.panel02').toggleClass('panelShow02', false);
+                $('.panel02').toggleClass('panelHide02', true);
+                
+                $('.panel04').toggleClass('panelShow04', false);
+                $('.panel04').toggleClass('panelHide04', true);
+            })
+
+            $('.n4').on("click", function(){
+                $('.panel04').toggleClass('panelHide04', false);
+                $('.panel04').toggleClass('panelShow04', true);
+
+                $('.panel01').toggleClass('panelHide01', true);
+                $('.panel01').toggleClass('panelShow01', false);
+
+                $('.panel02').toggleClass('panelShow02', false);
+                $('.panel02').toggleClass('panelHide02', true);
+                
+                $('.panel03').toggleClass('panelShow03', false);
+                $('.panel03').toggleClass('panelHide03', true);
+            })
+        </script>
+
+    </body>
+</html>
